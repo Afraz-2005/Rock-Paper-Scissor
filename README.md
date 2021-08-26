@@ -1,6 +1,6 @@
 ## <h1> Rock👊 Paper🖐 Scissors✌️
 
-<h3> Make by Me and Gilbert Francis
+<h3> Made by Me and Gilbert Francis
 <h3> Meet Gilbert - https://github.com/Nakahatra
 
 ---
