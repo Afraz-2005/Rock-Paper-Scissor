@@ -14,12 +14,15 @@ var c2 = document.querySelector(".c-2");
 var c3 = document.querySelector(".c-1");
 
 var h3 = document.querySelector(".h3");
+var score = document.querySelector(".score");
+var scorec = document.querySelector(".scoreC");
 
 //event listeners
 p1.addEventListener('click', player1Click);
 p2.addEventListener('click', player2Click);
 p3.addEventListener('click', player3Click);
 
+//function for viewing the final result
 function ViewFinalScore() {
     gamePoints;
     ComputerGamePoints;
@@ -56,6 +59,7 @@ function ViewFinalScore() {
 
 }
 
+//FUNCTIONS TO REACT ON PLAYER CLICK --
 
 function player1Click() {
     myComputerElements;
@@ -64,15 +68,19 @@ function player1Click() {
     if (compRand == 'Scissor') {
         alert(`the computer picked ${compRand}. You win :)`);
         gamePointsIncreement(gamePoints++);    
+        score.innerHTML = gamePoints;
     }
     if (compRand == 'Rock') {
         alert(`the computer picked ${compRand}. Its a Draw`);
         gamePointsIncreement(gamePoints++);    
         compPointIncreement(ComputerGamePoints++);
+        score.innerHTML = gamePoints;
+        scorec.innerHTML = ComputerGamePoints;
     }
     if (compRand == 'Paper') {
         alert(`the computer picked ${compRand}. You Lost :(`);
         compPointIncreement(ComputerGamePoints++);
+        scorec.innerHTML = ComputerGamePoints;
     }
     displayScore(++winOrLose);
 }
@@ -86,14 +94,18 @@ function player2Click() {
         alert(`the computer picked ${compRand}. Its a Draw`);
         gamePointsIncreement(gamePoints++);     
         compPointIncreement(ComputerGamePoints++);
+        score.innerHTML = gamePoints;
+        scorec.innerHTML = ComputerGamePoints;
     }
     if (compRand == 'Scissor') {
         alert(`the computer picked ${compRand}. You lost :(`);
         compPointIncreement(ComputerGamePoints++);
+        scorec.innerHTML = ComputerGamePoints;
     }
     if (compRand == 'Rock') {
         alert(`the computer picked ${compRand}. You win :)`);
         gamePointsIncreement(gamePoints++);
+        score.innerHTML = gamePoints;
     }
     displayScore(++winOrLose);
 }
@@ -105,19 +117,24 @@ function player3Click() {
     if (compRand == 'Rock') {
         alert(`the computer picked ${compRand}. You Lost :(`);
         compPointIncreement(ComputerGamePoints++);
+        scorec.innerHTML = ComputerGamePoints;
     }
     if (compRand == 'Paper') {
         alert(`the computer picked ${compRand}. You Win :)`);
         gamePointsIncreement(gamePoints++);
+        score.innerHTML = gamePoints;
     }
     if (compRand == 'Scissor') {
         alert(`the computer picked ${compRand}. Its a Draw)`);
         gamePointsIncreement(gamePoints++);    
         compPointIncreement(ComputerGamePoints++);
+        scorec.innerHTML = ComputerGamePoints;
+        score.innerHTML = gamePoints;
     }
     displayScore(++winOrLose);
 }
 
+// function to set game points
 function gamePointsIncreement(gamePoints) {
     gamePoints = gamePoints;
     return gamePoints;
@@ -127,12 +144,14 @@ function compPointIncreement(ComputerGamePoints) {
     return ComputerGamePoints;
 }
 
+//Display score on condition
 winOrLose;
 function displayScore(winOrLose) {
     winOrLose = winOrLose;
     ++winOrLose;
+
     if (winOrLose > 3){
-        // console.log(winOrLose);
+        console.log(winOrLose);
         ViewFinalScore();
     }
 }
