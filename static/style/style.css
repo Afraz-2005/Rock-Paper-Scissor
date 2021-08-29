@@ -93,11 +93,44 @@ a{
 .reset:hover{
     background-color: black;
 }
+.inputBox{
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    border-left: 0px;
+    background-color: rgba(90, 19, 19, 0);
+    outline: none;
+    color: blanchedalmond;
+    text-align: center;
+}
+.submit{
+    font-size: 15px;
+    margin-left: 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+.submit:hover{
+    background-color: black;
+    color: white;
+    box-shadow: 2px 2px 20px 2px white;
+}
+.inputHolder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inputHolder p{
+    margin-right: 20px;
+}
 .viewResult{
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 20px !important;
 }
+
 
 @media (max-width: 724px) {
     h1{

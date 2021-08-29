@@ -16,11 +16,14 @@ var c3 = document.querySelector(".c-1");
 var h3 = document.querySelector(".h3");
 var score = document.querySelector(".score");
 var scorec = document.querySelector(".scoreC");
+var inputBox = document.querySelector(".inputBox");
+var submitForm = document.querySelector(".submit");
 
 //event listeners
 p1.addEventListener('click', player1Click);
 p2.addEventListener('click', player2Click);
 p3.addEventListener('click', player3Click);
+submitForm.addEventListener('click', submitFormValidate);
 
 //function for viewing the final result
 function ViewFinalScore() {
@@ -144,14 +147,28 @@ function compPointIncreement(ComputerGamePoints) {
     return ComputerGamePoints;
 }
 
+//input checker Input should be >= 3
+function submitFormValidate() {
+    winOrLose;
+    if (inputBox.value < 3 ) {
+        alert("Number of rounds should be greater than or equal to 3");
+    }
+    else{
+        displayScore(winOrLose);
+    }
+}
+
 //Display score on condition
 winOrLose;
+inputBox;
 function displayScore(winOrLose) {
+    inputBox;
     winOrLose = winOrLose;
     ++winOrLose;
 
-    if (winOrLose > 3){
+    if (winOrLose > inputBox.value){
         console.log(winOrLose);
+        console.log(inputBox.value);
         ViewFinalScore();
     }
 }
