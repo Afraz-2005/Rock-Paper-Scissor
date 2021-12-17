@@ -12,14 +12,19 @@
     <div class="container">
       <div class="header">
         <h1>Welcome To The Rock Paper Scissors Game</h1>
-        <h2 class="h3"></h2>
         <div class="inputHolder">
           <p>Enter the number of turns </p>
           <input type="Number" value="3" class="inputBox" onkeyup="submitFormValidate()" required>
           <button class="submit">
             Submit
           </button>
-        </div>
+        </div><br>
+        <div class="viewResult">
+          <h4>Player Score: <span class="score"></span> </h4>
+          <h4>Computer Score: <span class="scoreC"></span> </h4>
+        </div><br><br>
+        <h2 class="h3"></h2>
+
       </div>
 
       <div class="content-baap">
@@ -31,11 +36,11 @@
             <button class="c-1">👊</button>
             <br />
             <br />
-            <br />
+
             <button class="c-2">✋</button>
             <br />
             <br />
-            <br />
+
             <button class="c-3">✌️</button>
           </div>
         </div>
@@ -47,19 +52,16 @@
             <button class="p-1 player">👊</button>
             <br />
             <br />
-            <br />
+
             <button class="p-2 player">✋</button>
             <br />
             <br />
-            <br />
+
             <button class="p-3 player">✌️</button>
           </div>
         </div>
       </div>
-      <div class="viewResult">
-        <h4>Player Score: <span class="score"></span> </h4>
-        <h4>Computer Score: <span class="scoreC"></span> </h4>
-      </div>
+
 
 
     <script src="./static/scripts/main.js"></script>
